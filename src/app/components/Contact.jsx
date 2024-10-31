@@ -1,14 +1,36 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState ,useRef} from 'react';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
-
+import toast from 'react-hot-toast';
+import emailjs from "emailjs-com"
 const Contact = () => {
+  const form = useRef();
+  const user_name = useRef();
+  const user_email = useRef();
+  const message = useRef();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: '',
   });
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_1wwm4ve', 'template_ovfplhi', form.current, 'iXXV44MtI9rFA-j2j')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+   
+    formData.name = "";
+    formData.email = "";
+    formData.message = "";
+    toast.success("Sent");
+  };
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,6 +47,7 @@ const Contact = () => {
 
   return (
     <div className="flex flex-col md:flex-row bg-[#F5F5F5] min-h-screen">
+      
       {/* Left Side: Contact Information */}
       <div className="md:w-1/2 bg[#164574] bg-[#121212] text-white p-10 flex flex-col justify-center items-center">
         <h2 className="text-4xl font-semibold mb-4">Get in Touch</h2>
@@ -51,17 +74,18 @@ const Contact = () => {
       <div className="md:w-1/2 p-10 flex flex-col justify-center items-center">
         <h2 className="text-3xl font-semibold mb-6 text[#164574] text-[#121212]">Contact Us</h2>
         <form
-          onSubmit={handleSubmit}
+        ref={form}
+          onSubmit={sendEmail}
           className="bg-white shadow-lg rounded-lg p-8 space-y-6 w-full max-w-lg"
         >
           {/* Name Field */}
           <div>
             <label htmlFor="name" className="block text-lg font-medium text-gray-700">Name</label>
             <input
+            ref={user_name}
               type="text"
               id="name"
-              name="name"
-              value={formData.name}
+              name="user_name"
               onChange={handleChange}
               required
               className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-[#164574] focus:ring-[#164574] transition"
@@ -72,10 +96,10 @@ const Contact = () => {
           <div>
             <label htmlFor="email" className="block text-lg font-medium text-gray-700">Email</label>
             <input
+            ref={user_email}
               type="email"
               id="email"
-              name="email"
-              value={formData.email}
+              name="user_email"
               onChange={handleChange}
               required
               className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-[#164574] focus:ring-[#164574] transition"
@@ -83,7 +107,7 @@ const Contact = () => {
           </div>
 
           {/* Subject Field */}
-          <div>
+          {/* <div>
             <label htmlFor="subject" className="block text-lg font-medium text-gray-700">Subject</label>
             <input
               type="text"
@@ -94,15 +118,15 @@ const Contact = () => {
               required
               className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-[#164574] focus:ring-[#164574] transition"
             />
-          </div>
+          </div> */}
 
           {/* Message Field */}
           <div>
             <label htmlFor="message" className="block text-lg font-medium text-gray-700">Message</label>
             <textarea
+            ref={message}
               id="message"
               name="message"
-              value={formData.message}
               onChange={handleChange}
               required
               rows="4"
