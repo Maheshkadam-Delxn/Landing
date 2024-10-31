@@ -3,7 +3,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='w-full h-[100vh] flex flex-col justify-center items-center bg-gradient-to-r bg-[#121212] bg[#8ODOC7]'>
+    <div className='w-full  flex flex-col justify-center items-center bg-gradient-to-r bg-[#121212] bg[#8ODOC7]'>
     {/* Title Section */}
     <div className='text-center mb-8 '>
       <h1 className='text-5xl font-semibold text-white'>Why choose DevServe?</h1>

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import HomeComponent from "./components/Home"; 
 import Footer from "./Components/Footer";
 import About from "./components/About";
@@ -12,7 +11,7 @@ export default function Home() {
     <div className="overflow-x-auto scrollbar-none flex flex-col bg[#121212]  ">
               <Navbar />
 
-      <div className="w-full h-[100vh] flex flex-col items-center gap-24 bg-[#dfe9f0]" style={{
+      <div className="w-full h-auto  lg:h[100vh] flex flex-col items-center gap-24 bg-[#dfe9f0]" style={{
         backgroundImage: "url('/images/home.jpg')",
         backgroundSize: 'contain',
         backgroundPosition: 'right center',
@@ -22,7 +21,7 @@ export default function Home() {
         <HomeComponent />
       </div>
       <Services />
-      <About />
+      <About/>
       <Faq />
       <Contact />
       <Footer />
