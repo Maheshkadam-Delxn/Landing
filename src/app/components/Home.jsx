@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import dynamic from "next/dynamic";
 
@@ -13,7 +13,7 @@ const Home = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
 
   return (
-    <div
+    <div id="Home"
       className="relative bg-cover bg-center bg-no-repeat min-h-screen flex flex-col justify-start items-center w-full overflow-hidden pt-24 px-4"
       style={{ backgroundImage: "url('/images/background.jpg')" }}
     >
@@ -31,14 +31,14 @@ const Home = () => {
             color: "transparent",
           }}
         >
-          Welcome To <span className="text-white">DevServe</span>
+          <p className="text-white lg:text-transparent mr-9">Welcome To <span className="text-white">DevServe</span></p>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="text-lg md:text-2xl mb-8 text-center ml-6 z-10"
+          className="text-lg md:text-2xl mb-8 text-center z-10"
           style={{
             background:
               "linear-gradient(90deg, rgba(0,30,46,1) 0%, rgba(0,81,128,1) 91%, rgba(0,132,116,1) 100%)",
@@ -47,8 +47,7 @@ const Home = () => {
             color: "transparent",
           }}
         >
-          A Solution to All Your{" "}
-          <span className="text-white ml-3">Software Problems</span>
+          <span className="text-white lg:text-transparent">A Solution to All Your <span className="text-white">Software Problems</span></span>
         </motion.p>
 
         <div className="relative flex justify-center items-center w-full z-10">
@@ -79,11 +78,12 @@ const Home = () => {
         DevServe
       </motion.h1>
 
-      <p className="absolute bottom-24 left-4 text-gray-700 text-md md:text-lg font-semibold z-10">
+      <p className="absolute bottom-2 left-4 text-white  lg:text-gray-700 text-md md:text-lg font-semibold z-10">
         Your One-Stop Solution for Apps, Web, and Desktop Development.
       </p>
 
-      <div className="absolute inset-y-0 left-0 flex items-center justify-center w-1/2">
+      {/* Lottie animation - hidden on small and medium screens, visible on large screens */}
+      <div className="hidden lg:flex absolute inset-y-0 left-0 items-center justify-center w-1/2">
         <Lottie animationData={animationData} width={250} height={250} className="w-full" />
       </div>
     </div>

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import Link from "next/link";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { Link } from "react-scroll";
+import { FaTwitter, FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -21,19 +21,29 @@ const Footer = () => {
           <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <Link href="/" className="hover:text-gray-300">Home</Link>
+              <Link to="Home" smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer">
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/services" className="hover:text-gray-300">Services</Link>
+              <Link to="Services" smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer">
+                Services
+              </Link>
             </li>
             <li>
-              <Link href="/why-choose-us" className="hover:text-gray-300">Why Choose Us</Link>
+              <Link to="About" smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer">
+                Why Choose Us
+              </Link>
             </li>
             <li>
-              <Link href="/faq" className="hover:text-gray-300">FAQ</Link>
+              <Link to="FAQ" smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer">
+                FAQ
+              </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-gray-300">Contact</Link>
+              <Link to="Contacts" smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer">
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
@@ -41,19 +51,19 @@ const Footer = () => {
         {/* Contact and Social Media */}
         <div>
           <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-          <p className="text-gray-300 mb-2">Email: support@devserve.com</p>
-          <p className="text-gray-300 mb-4">Phone: +123 456 7890</p>
+          <p className="text-gray-300 mb-2">Email: devserve.co@gmail.com</p>
+          <p className="text-gray-300 mb-4">Phone: +91 8668903099</p>
           <div className="flex space-x-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
-              <FaFacebookF />
+            <a href="https://www.instagram.com/dev.serve/profilecard/?igsh=d3FxdnVyMHd4bjh6" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
+              <FaInstagram />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
+            <a href="https://x.com/DevServe_2024?t=s-RyFCD-8D2ceFwvcJ_Uug&s=09" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
               <FaTwitter />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
+            <a href="https://www.linkedin.com/in/dev-serve-05a079331?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
               <FaLinkedinIn />
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
+            <a href="https://github.com/DevServe-co?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
               <FaGithub />
             </a>
           </div>
