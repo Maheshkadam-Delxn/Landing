@@ -14,7 +14,7 @@ export default function Home() {
       <Toaster/>
               <Navbar />
               <div
-  className="w-full h-auto lg:h-[100vh] flex flex-col items-center bg-[#dfe9f0]"
+  className="w-full sm:h-auto md:h-auto flex flex-col items-center bg-[#dfe9f0]"
   style={{
     backgroundImage: "url('/images/home.jpg')",
     backgroundSize: 'cover', // Cover the full screen on small and medium

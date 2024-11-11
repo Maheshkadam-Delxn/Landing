@@ -19,14 +19,14 @@ const About = () => {
     </div>
   
     
-    <div className='bg-white  w-4/6 p-10 rounded-3xl shadow-2xl flex  items-center shadow-gray-800 '>
-    <hr className='w-full rotate-90 border-t border-black'/>
+    <div className='bg-white  w-4/6 p-10  rounded-3xl shadow-2xl flex  items-center shadow-gray-800 '>
+    <hr className='w-full rotate-90 border-t border-black '/>
      <div className='flex flex-col items-start'>
      <div className='flex items-center'>
    
    {/* <div className='border-l-2 border-black  mr-4'></div> */}
 
-   <h2 className='text-3xl font-semibold text-black'>Premier IT Service Provider</h2>
+   <h2 className='lg:text-3xl text-xl font-semibold text-black'>Premier IT Service Provider</h2>
  </div>
 
  

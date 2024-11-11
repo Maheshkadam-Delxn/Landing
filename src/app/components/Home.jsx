@@ -50,22 +50,23 @@ const Home = () => {
           <span className="text-white lg:text-transparent">A Solution to All Your <span className="text-white">Software Problems</span></span>
         </motion.p>
 
-        <div className="relative flex justify-center items-center w-full z-10">
-          <div className="flex sm:flex-row sm:mt-8 sm:p-6 px-8 py-6 text-lg bg-black text-white rounded-full transition w-3/4 md:w-2/4 relative">
-            Schedule a Meeting
-            <div className="absolute right-0 transform -translate-x-5 -translate-y-5">
-              <a
-                href="https://calendly.com/devserve-co"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="items-center px-4 py-2 mt-2 bg-white text-black rounded-full hover:bg-gray-200 transition">
-                  Connect
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
+        <div className="flex justify-center items-center w-full z-10 px-4">
+  <div className="flex flex-col sm:flex-row items-center justify-evenly bg-black text-white text-lg rounded-full p-2 sm:p-6 w-full sm:w-3/4 md:w-2/4">
+    <span className="mb-4 sm:mb-0 sm:mr-4">Schedule a Meeting</span>
+    <a
+      href="https://calendly.com/devserve-co"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <button className="px-6 py-2 bg-white text-black rounded-full hover:bg-gray-200 transition">
+        Connect
+      </button>
+    </a>
+  </div>
+</div>
+
+
+
       </div>
 
       <motion.h1
@@ -83,7 +84,13 @@ const Home = () => {
       </p>
 
       {/* Lottie animation - hidden on small and medium screens, visible on large screens */}
-      <div className="hidden lg:flex absolute inset-y-0 left-0 items-center justify-center w-1/2">
+      <div className="
+  absolute inset-y-0 items-center justify-center w-1/2 
+  left-38 top-96
+  sm:w-1/2 sm:flex
+  md:top-64 md:left-80 md:w-64 md:flex 
+  lg:top-0 lg:left-0 lg:w-1/2 lg:flex
+">
         <Lottie animationData={animationData} width={250} height={250} className="w-full" />
       </div>
     </div>
