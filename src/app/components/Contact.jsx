@@ -46,7 +46,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row bg-[#F5F5F5] min-h-screen">
+    <div id="Contacts" className="mt-16 flex flex-col md:flex-row bg-[#F5F5F5] min-h-screen">
       
       {/* Left Side: Contact Information */}
       <div className="md:w-1/2 bg[#164574] bg-[#121212] text-white p-10 flex flex-col justify-center items-center">
@@ -106,21 +106,7 @@ const Contact = () => {
             />
           </div>
 
-          {/* Subject Field */}
-          {/* <div>
-            <label htmlFor="subject" className="block text-lg font-medium text-gray-700">Subject</label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-[#164574] focus:ring-[#164574] transition"
-            />
-          </div> */}
-
-          {/* Message Field */}
+          
           <div>
             <label htmlFor="message" className="block text-lg font-medium text-gray-700">Message</label>
             <textarea
@@ -130,14 +116,14 @@ const Contact = () => {
               onChange={handleChange}
               required
               rows="4"
-              className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-[#164574] focus:ring-[#164574] transition"
+              className="mt-1 block w-full p-3 border text-gray-700 border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-[#164574] focus:ring-[#164574] transition"
             />
           </div>
 
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-3 px-6 bg[#164574] bg-[#121212] text-white font-semibold rounded-md hover:bg-[#123c59] transition duration-200 shadow-lg"
+            className="w-full py-3 px-6 bg[#164574] bg-[#121212]  font-semibold rounded-md hover:bg-[#123c59] transition duration-200 shadow-lg"
           >
             Send Message
           </button>

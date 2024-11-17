@@ -10,7 +10,7 @@ const Home = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
 
   return (
-    <div
+    <div id="Home"
       className="relative bg-cover bg-center bg-no-repeat min-h-screen flex flex-col justify-start items-center w-full overflow-hidden pt-24 px-4"
       style={{ backgroundImage: "url('/images/background.jpg')" }}
     >
@@ -28,13 +28,13 @@ const Home = () => {
             color: "transparent",
           }}
         >
-          Welcome To <span className="text-white">DevServe</span>
+          <p className="text-white lg:text-transparent mr-9">Welcome To <span className="text-white">DevServe</span></p>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="text-lg md:text-2xl mb-8 text-center ml-6 z-10"
+          className="text-lg md:text-2xl mb-8 text-center z-10"
           style={{
             background:
               "linear-gradient(90deg, rgba(0,30,46,1) 0%, rgba(0,81,128,1) 91%, rgba(0,132,116,1) 100%)",
@@ -47,22 +47,23 @@ const Home = () => {
           <span className="text-white ml-3">Software Problems</span>
         </motion.p>
 
-        <div className="relative flex justify-center items-center w-full z-10">
-          <div className="flex sm:flex-row sm:mt-8 sm:p-6 px-8 py-6 text-lg bg-black text-white rounded-full transition w-3/4 md:w-2/4 relative">
-            Schedule a Meeting
-            <div className="absolute right-0 transform -translate-x-5 -translate-y-5">
-              <a
-                href="https://calendly.com/devserve-co"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="items-center px-4 py-2 mt-2 bg-white text-black rounded-full hover:bg-gray-200 transition">
-                  Connect
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
+        <div className="flex justify-center items-center w-full z-10 px-4">
+  <div className="flex flex-col sm:flex-row items-center justify-evenly bg-black text-white text-lg rounded-full p-2 sm:p-6 w-full sm:w-3/4 md:w-2/4">
+    <span className="mb-4 sm:mb-0 sm:mr-4">Schedule a Meeting</span>
+    <a
+      href="https://calendly.com/devserve-co"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <button className="px-6 py-2 bg-white text-black rounded-full hover:bg-gray-200 transition">
+        Connect
+      </button>
+    </a>
+  </div>
+</div>
+
+
+
       </div>
 
       <motion.h1

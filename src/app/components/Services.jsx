@@ -128,7 +128,7 @@ const industries = [{
 
 const Services = () => {
   return (
-    <div className="w-full h-auto bg-[#121212] flex flex-col items-center gap-10 p-5 sm:p-10">
+    <div id="Services" className="mt-10 w-full h-auto bg-[#121212] flex flex-col items-center gap-10 p-5 sm:p-10">
       {/* Services Section */}
       <div className="flex flex-col items-center justify-center gap-10">
         <h1 className="text-xl sm:text-2xl font-extrabold text-white">Services</h1>

@@ -43,27 +43,28 @@ const FAQItem = ({ question, answer }) => {
 
 const Faq = () => {
   const faqs = [
-    { question: "What is DevServe?", answer: "DevServe is a platform that..." },
+    { question: "What is DevServe?", answer: "DevServe is a software service platform." },
     {
       question: "How does DevServe benefit my business?",
-      answer: "DevServe helps by...",
+      answer: "DevServe enhances business efficiency through technology.",
     },
     {
       question: "How do I get started with DevServe?",
-      answer: "To get started, you can...",
+      answer: "To get started, visit our website for registration.",
     },
     {
       question: "Is DevServe secure and reliable?",
-      answer: "Yes, DevServe is built with security...",
+      answer: "Yes, DevServe employs advanced security protocols.",
     },
     {
       question: "What kind of ROI can I expect from partnering with DevServe?",
-      answer: "ROI varies, but...",
+      answer: "ROI can vary, influenced by your specific needs.",
     },
   ];
 
+
   return (
-    <div className="w-full h-auto flex flex-col gap-5 items-center justify-start phone:gap-5 p-10 bg-[#121212] text-white">
+    <div id="FAQ" className=" mt-24 w-full h-auto flex flex-col gap-5 items-center justify-start phone:gap-5 p-10 bg-[#121212] text-white">
       <div className="flex flex-col items-center gap-3 w-full p-10 phone:p-5">
         <h1 className="text-3xl font-bold phone:text-2xl ">FAQ</h1>
       </div>
