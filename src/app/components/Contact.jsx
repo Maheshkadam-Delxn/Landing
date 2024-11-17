@@ -57,16 +57,16 @@ const Contact = () => {
         <div className="space-y-6">
           <div className="flex items-center space-x-4">
             <FaEnvelope className="text-xl" />
-            <span>contact@devserve.com</span>
+            <span>devserve.co@gmail.com</span>
           </div>
           <div className="flex items-center space-x-4">
             <FaPhoneAlt className="text-xl" />
-            <span>+1 (234) 567-890</span>
+            <span>+91 7841018646</span>
           </div>
-          <div className="flex items-center space-x-4">
+          {/* <div className="flex items-center space-x-4">
             <FaMapMarkerAlt className="text-xl" />
             <span>1234 DevServe St, Software City, CA</span>
-          </div>
+          </div> */}
         </div>
       </div>
 

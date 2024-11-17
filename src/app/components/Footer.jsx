@@ -5,7 +5,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#164574] text-white py-10 px-4 md:px-8">
+    <footer className="bg-neutral-800 text-white py-10 px-4 md:px-8 ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Logo and Description */}
         <div>
@@ -41,8 +41,8 @@ const Footer = () => {
         {/* Contact and Social Media */}
         <div>
           <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-          <p className="text-gray-300 mb-2">Email: support@devserve.com</p>
-          <p className="text-gray-300 mb-4">Phone: +123 456 7890</p>
+          <p className="text-gray-300 mb-2">Email: devserve.co@gmail.com</p>
+          <p className="text-gray-300 mb-4">Phone: +91 7841018646</p>
           <div className="flex space-x-4">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
               <FaFacebookF />

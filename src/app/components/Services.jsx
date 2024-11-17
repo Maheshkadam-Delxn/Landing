@@ -10,46 +10,62 @@ import { IoLogoElectron } from "react-icons/io5";
 import {BiLogoMongodb} from "react-icons/bi"
 import { MdOutlineHealthAndSafety,MdOutlineRealEstateAgent } from "react-icons/md"
 import { LiaMoneyBillWaveAltSolid,LiaLuggageCartSolid } from "react-icons/lia";
+import { HiComputerDesktop } from "react-icons/hi2";
 import { PiBooksDuotone } from "react-icons/pi";
+import { IoCloudUploadSharp } from "react-icons/io5";
+import { VscAzureDevops } from "react-icons/vsc";
+import { TbDeviceDesktopAnalytics } from "react-icons/tb";
+import { FaCartShopping } from "react-icons/fa6";
+import { FaMobileScreenButton } from "react-icons/fa6";
+import { HiUsers } from "react-icons/hi";
+import { FaFigma } from "react-icons/fa";
 const servicesData = [
   {
     id: 1,
     title: "Web Development",
+    logo : HiComputerDesktop ,
     description: "Crafting responsive, user-focused websites that fulfill business needs. Our team ensures fast performance, SEO readiness, and the latest technologies to establish a solid digital presence."
   },
   {
     id: 2,
     title: "Mobile App Development",
+    logo : FaMobileScreenButton ,
     description: "Creating cross-platform apps that work flawlessly on any device. We prioritize features, intuitive interfaces, and security, ensuring an engaging, consistent experience for all users."
   },
   {
     id: 3,
     title: "UI/UX Design",
+    logo :FaFigma,
     description: "Delivering intuitive, visually appealing designs that boost user engagement and satisfaction. Our team blends functionality and aesthetics to create interfaces that offer great usability."
   },
   {
     id: 4,
     title: "Cloud Solutions",
+    logo : IoCloudUploadSharp,
     description: "Offering scalable cloud services to streamline business operations. From migration to integration, we help optimize resources and secure data with trusted providers like AWS, Azure, and Google Cloud."
   },
   {
     id: 5,
     title: "E-Commerce Solutions",
+    logo : FaCartShopping ,
     description: "Developing tailored e-commerce platforms to expand your online business. We offer seamless payment integration, customizable features, and optimized catalogs to boost user engagement."
   },
   {
     id: 6,
     title: "DevOps Services",
+    logo : VscAzureDevops,
     description: "Accelerating deployment with modern DevOps tools to enhance scalability. Our solutions focus on automation, reducing time-to-market, and ensuring seamless delivery for efficient operations."
   },
   {
     id: 7,
     title: "Data Analytics & AI",
+    logo:TbDeviceDesktopAnalytics,
     description: "Using data and AI to empower your business with insights. Our services in analytics, machine learning, and big data help unlock valuable information for informed decisions."
   },
   {
     id: 8,
     title: "IT Consulting",
+    logo : HiUsers ,
     description: "Guiding your IT strategy and infrastructure for business growth. We assess needs, recommend solutions, and develop customized plans to optimize resources and drive innovation."
   },
 ];
@@ -120,9 +136,9 @@ const Services = () => {
           {servicesData?.map((service) => (
             <div
               key={service.id}
-              className="shadow-sm shadow-neutral-600 p-8  w-full  md:w-1/3 rounded-lg h-auto bg-neutral-800 flex flex-col items-start justify-between"
+              className="shadow-sm shadow-neutral-600 p-8  w-full  md:w-1/3 rounded-lg h-auto bg-neutral-800 flex flex-col items-start justify-between gap-2"
             >
-              <FaCode className="text-2xl md:text-3xl" />
+              <service.logo className="text-2xl md:text-3xl text-white" />
               <h1 className="text-lg md:text-xl font-bold text-white">{service.title}</h1>
               <p className="text-sm text-neutral-400">
                 {service.description}

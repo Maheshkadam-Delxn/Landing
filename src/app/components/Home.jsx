@@ -1,12 +1,9 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import dynamic from "next/dynamic";
-
-// Dynamically import Lottie to prevent SSR issues
-const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
-import animationData from "../../../public/assets/home.json";
-
+import Image from "next/image";
+import Lottie from "lottie-react";
+import animationData from "../../../public/assets/home.json"
 const Home = () => {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [300, 0]);
@@ -33,7 +30,6 @@ const Home = () => {
         >
           Welcome To <span className="text-white">DevServe</span>
         </motion.h1>
-
         <motion.p
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,7 +43,7 @@ const Home = () => {
             color: "transparent",
           }}
         >
-          A Solution to All Your{" "}
+          A Solution to All Your  
           <span className="text-white ml-3">Software Problems</span>
         </motion.p>
 
@@ -79,12 +75,15 @@ const Home = () => {
         DevServe
       </motion.h1>
 
+      {/* New punchline text in the bottom-left of the white section */}
       <p className="absolute bottom-24 left-4 text-gray-700 text-md md:text-lg font-semibold z-10">
         Your One-Stop Solution for Apps, Web, and Desktop Development.
       </p>
 
+      {/* Centered image in the right pane */}
       <div className="absolute inset-y-0 left-0 flex items-center justify-center w-1/2">
-        <Lottie animationData={animationData} width={250} height={250} className="w-full" />
+          <Lottie animationData={animationData} width={250} height={250} className="w-full"/>
+        {/* <Image src="/images/home-left.png" alt="Logo" width={300} height={300} className="object-contain" /> */}
       </div>
     </div>
   );
